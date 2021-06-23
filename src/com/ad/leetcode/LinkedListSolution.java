@@ -10,7 +10,6 @@ public class LinkedListSolution {
      * @return ListNode
      */
     public ListNode removeNthFromEnd(ListNode head, int n) {
-
         ListNode pre = new ListNode(-1);
         if (head == null) {
             return pre;

@@ -10,20 +10,19 @@ package com.ad.leetcode;
  * ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-public class ListNode {
+class ListNode {
     public int val;
-    public ListNode next;
+    ListNode next;
 
-    public ListNode() {
-    }
+    ListNode() {}
 
-    public ListNode(int val) {
+    ListNode(int val) {
         this.val = val;
     }
 
-    public ListNode(int val, ListNode next) {
+    ListNode(int val, ListNode node) {
         this.val = val;
-        this.next = next;
+        this.next = node;
     }
 }
 

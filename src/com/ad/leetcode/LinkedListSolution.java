@@ -11,6 +11,48 @@ public class LinkedListSolution {
      */
     public ListNode removeNthFromEnd(ListNode head, int n) {
 
-        return null;
+        ListNode pre = new ListNode(-1);
+        if (head == null) return pre;
+
+        //声明快慢指针
+        pre.next = head;
+        ListNode slow = pre;
+        ListNode fast = pre;
+
+        //使快指针先移动n个位置
+        for (int i = 0; i < n; i++) {
+            fast = fast.next;
+        }
+
+        //这时候快慢指针开始一起移动，当快指针结束则找到要删除的结点
+        while(fast.next != null) {
+
+            fast = fast.next;
+            slow = slow.next;
+        }
+
+        slow.next = slow.next.next;
+        return pre.next;
+    }
+
+
+    public String printer(ListNode head) {
+
+        if (head == null) return null;
+
+        StringBuilder s = new StringBuilder();
+        ListNode node = head;
+
+        s.append("[");
+        while(node != null) {
+
+            s.append(node.val + " ---> ");
+            node = node.next;
+        }
+
+        s.append("null");
+        s.append("]");
+
+        return s.toString();
     }
 }

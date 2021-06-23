@@ -12,7 +12,9 @@ public class LinkedListSolution {
     public ListNode removeNthFromEnd(ListNode head, int n) {
 
         ListNode pre = new ListNode(-1);
-        if (head == null) return pre;
+        if (head == null) {
+            return pre;
+        }
 
         //声明快慢指针
         pre.next = head;

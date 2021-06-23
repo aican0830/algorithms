@@ -7,7 +7,7 @@ public class LinkedListSolution {
      * https://leetcode-cn.com/leetbook/read/top-interview-questions-easy/xn2925/
      * @param head
      * @param n
-     * @return
+     * @return ListNode
      */
     public ListNode removeNthFromEnd(ListNode head, int n) {
 
@@ -31,11 +31,18 @@ public class LinkedListSolution {
             slow = slow.next;
         }
 
+        //直接把当前结点的next指向下一个结点，即为删除n位置的结点
         slow.next = slow.next.next;
         return pre.next;
     }
 
 
+    /**
+     * 传入头结点打印链表
+     *
+     * @param head
+     * @return String
+     */
     public String printer(ListNode head) {
 
         if (head == null) return null;

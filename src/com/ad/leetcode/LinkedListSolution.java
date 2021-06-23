@@ -36,6 +36,19 @@ public class LinkedListSolution {
         return pre.next;
     }
 
+    /**
+     * 21. 合并两个有序链表
+     * https://leetcode-cn.com/problems/merge-two-sorted-lists/
+     *
+     * @param l1
+     * @param l2
+     * @return
+     */
+    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+
+        return null;
+    }
+
 
     /**
      * 传入头结点打印链表

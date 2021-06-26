@@ -5,6 +5,13 @@ import java.util.List;
 
 public class ArrayListSolution {
 
+    /**
+     * 448. 找到所有数组中消失的数字
+     * https://leetcode-cn.com/problems/find-all-numbers-disappeared-in-an-array/
+     *
+     * @param nums
+     * @return
+     */
     public List<Integer> findDisappearedNumbers(int[] nums) {
 
         List<Integer> ans = new ArrayList<>();

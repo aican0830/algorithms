@@ -1,11 +1,49 @@
 package com.ad.leetcode;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 public class TreeSolution {
+
+    /**
+     * 98. 验证二叉搜索树
+     * https://leetcode-cn.com/leetbook/read/top-interview-questions-easy/xn08xg/
+     *
+     * @param root
+     * @return
+     */
+    public boolean isValidBST(TreeNode root) {
+
+        //双队列
+        Deque<TreeNode> stack = new LinkedList<>();
+
+        //声明一个最小值
+        double inorder = -Double.MAX_VALUE;
+
+        //栈为空或者节点为空，退出循环
+        while(!stack.isEmpty() || root != null) {
+
+            //循环把所有的左节点入栈
+            while (root != null) {
+                stack.push(root);
+                root = root.left;
+            }
+
+            //按顺序弹出
+            root = stack.pop();
+
+            //判断左节点值是否小于中间节点
+            if (root.val <= inorder) {
+                return false;
+            }
+
+            inorder = root.val;
+
+            //在遍历右子节点
+            root = root.right;
+        }
+
+        return true;
+    }
 
     /**
      * 102. 二叉树的层序遍历

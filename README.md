@@ -5,6 +5,9 @@
 ### Leetcode 题解代码实现
 
 #### 数组
+[169. 多数元素](https://leetcode-cn.com/problems/majority-element/)
+
+[240. 搜索二维矩阵 II](https://leetcode-cn.com/problems/search-a-2d-matrix-ii/)
 
 [448. 找到所有数组中消失的数字](https://leetcode-cn.com/problems/find-all-numbers-disappeared-in-an-array/)
 

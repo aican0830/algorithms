@@ -1,9 +1,66 @@
 package com.ad.arraylist;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class ArrayListSolution {
+
+    /**
+     * 169. 多数元素
+     * https://leetcode-cn.com/problems/majority-element/
+     *
+     * @param nums
+     * @return
+     */
+    public int majorityElement(int[] nums) {
+
+        int ans = 0;
+        int len = nums.length >> 1; // n/2的长度
+        Map<Integer, Integer> map = new HashMap<>();
+
+        for (int i = 0; i < nums.length; i++) {
+
+            //存储到map key为数组的值，key存在value+1
+            if (!map.containsKey(nums[i])) {
+                map.put(nums[i], 1);
+            } else {
+                map.put(nums[i], map.get(nums[i]) + 1);
+            }
+
+            //判断元素出现的次数
+            if (map.get(nums[i]) > len) {
+                return nums[i];
+            }
+        }
+
+        return ans;
+    }
+
+
+    /**
+     * 240. 搜索二维矩阵 II
+     * https://leetcode-cn.com/problems/search-a-2d-matrix-ii/
+     *
+     * @param matrix
+     * @param target
+     * @return
+     */
+    public boolean searchMatrix(int[][] matrix, int target) {
+
+        //暴力解法，二维数组循环
+        for (int i = 0; i < matrix.length; i++) {
+
+            int[] second = matrix[i];
+            for (int j = 0; j < second.length; j++) {
+
+                if (target == matrix[i][j]) return true;
+            }
+        }
+
+        return false;
+    }
 
     /**
      * 448. 找到所有数组中消失的数字

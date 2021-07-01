@@ -29,6 +29,8 @@
 #### 二叉树
 [98. 验证二叉搜索树](https://leetcode-cn.com/problems/validate-binary-search-tree/)
 
+[101. 对称二叉树](https://leetcode-cn.com/problems/symmetric-tree/)
+
 [102. 二叉树的层序遍历](https://leetcode-cn.com/problems/binary-tree-level-order-traversal/g)
 
 [104. 二叉树的最大深度](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/)

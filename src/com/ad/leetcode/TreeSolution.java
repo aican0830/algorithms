@@ -15,14 +15,12 @@ public class TreeSolution {
         return check(root, root);
     }
 
-    private boolean check(TreeNode p, TreeNode q) {
-        if (p == null && q == null) {
-            return true;
-        }
-        if (p == null || q == null) {
-            return false;
-        }
-        return p.val == q.val && check(p.left, q.right) && check(p.right, q.left);
+    private boolean check(TreeNode l, TreeNode r) {
+
+        if (l == null && r == null) return true;
+        if (l == null || r == null) return false;
+
+        return l.val == r.val && check(l.left, r.right) && check(l.right, r.left);
     }
 
     /**

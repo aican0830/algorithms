@@ -5,6 +5,27 @@ import java.util.*;
 public class TreeSolution {
 
     /**
+     * 101. 对称二叉树
+     * https://leetcode-cn.com/leetbook/read/data-structure-binary-tree/xoxzgv/
+     *
+     * @param root
+     * @return
+     */
+    public boolean isSymmetric(TreeNode root) {
+        return check(root, root);
+    }
+
+    private boolean check(TreeNode p, TreeNode q) {
+        if (p == null && q == null) {
+            return true;
+        }
+        if (p == null || q == null) {
+            return false;
+        }
+        return p.val == q.val && check(p.left, q.right) && check(p.right, q.left);
+    }
+
+    /**
      * 98. 验证二叉搜索树
      * https://leetcode-cn.com/leetbook/read/top-interview-questions-easy/xn08xg/
      *

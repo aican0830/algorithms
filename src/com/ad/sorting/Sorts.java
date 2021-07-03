@@ -21,4 +21,28 @@ public class Sorts {
 
         }
     }
+
+    public void shellSort(int[] nums) {
+
+        int len = nums.length;
+        int step = len;
+
+        while(step >= 1) {
+
+            step = step/2;
+            System.out.printf("" + step);
+            for (int i = step; i < len; i++) {
+                for (int j = i; j - step >= 0; j-=step) {
+
+                    if (nums[j-step] > nums[j]) {
+                        int tmp = nums[j-step];
+                        nums[j-step] = nums[j];
+                        nums[j] = tmp;
+                    } else {
+                        break;
+                    }
+                }
+            }
+        }
+    }
 }

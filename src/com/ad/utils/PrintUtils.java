@@ -5,7 +5,7 @@ public class PrintUtils {
     public static String printArray(int[] nums) {
 
         StringBuffer s = new StringBuffer();
-        System.out.printf("" + nums.length);
+        //System.out.printf("" + nums.length);
 
         s.append("[");
 

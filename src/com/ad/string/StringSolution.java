@@ -33,14 +33,7 @@ public class StringSolution {
         return sgood.toString().equals(sgoodRev.toString());
     }
 
-    /**
-     * 212. 单词搜索 II
-     * https://leetcode-cn.com/problems/word-search-ii/
-     *
-     * @param board
-     * @param words
-     * @return
-     */
+
     class TrieNode {
         HashMap<Character, TrieNode> children = new HashMap<Character, TrieNode>();
         String word = null;
@@ -50,6 +43,14 @@ public class StringSolution {
     char[][] _board = null;
     ArrayList<String> _result = new ArrayList<String>();
 
+    /**
+     * 212. 单词搜索 II
+     * https://leetcode-cn.com/problems/word-search-ii/
+     *
+     * @param board
+     * @param words
+     * @return
+     */
     public List<String> findWords(char[][] board, String[] words) {
         // Step 1). Construct the Trie
         TrieNode root = new TrieNode();

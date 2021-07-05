@@ -1,5 +1,7 @@
 package com.ad.sorting;
 
+import com.ad.utils.PrintUtils;
+
 public class Sorts {
 
     public void bubbleSort(int[] nums) {
@@ -44,5 +46,58 @@ public class Sorts {
                 }
             }
         }
+    }
+
+    public void quickSort(int[] nums) {
+
+        String res = PrintUtils.printArray(nums);
+        System.out.println("原 数组："+res);
+        qSort(nums, 0, nums.length-1);
+    }
+
+    private void qSort(int[] nums, int left, int right) {
+
+        if (left >= right) return;
+
+        int base = nums[left];
+        int ll = left;
+        int rr = right;
+
+        System.out.println("base="+base+"得排序结果");
+        while (ll < rr) {
+
+            while(ll < rr && nums[rr] >= base) {
+               rr--;
+            }
+
+            if (ll < rr) {
+                swap(nums,ll, rr);
+                System.out.println("从右边往左交换"+PrintUtils.printArray(nums));
+
+                ll++;
+            }
+
+            while(ll<rr && nums[ll] <= base) {
+               ll++;
+            }
+            if (ll < rr) {
+                swap(nums,ll, rr);
+                System.out.println("从左边往右交换"+PrintUtils.printArray(nums));
+                rr--;
+            }
+        }
+
+        if (ll > left) {
+            qSort(nums, left, ll-1);
+        }
+        if (rr < right) {
+            qSort(nums, ll+1, right);
+        }
+    }
+
+    private void swap(int[] nums, int i1, int i2) {
+        int temp = nums[i1];
+        nums[i1] = nums[i2];
+        nums[i2] = temp;
     }
 }

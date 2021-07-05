@@ -16,6 +16,8 @@
 #### 字符串
 [125. 验证回文串](https://leetcode-cn.com/problems/valid-palindrome/)
 
+[242. 有效的字母异位词](https://leetcode-cn.com/problems/valid-anagram/)
+
 [344. 反转字符串](https://leetcode-cn.com/problems/reverse-string/)
 
 [387. 字符串中的第一个唯一字符](https://leetcode-cn.com/problems/first-unique-character-in-a-string/)

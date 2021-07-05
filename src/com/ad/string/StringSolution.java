@@ -1,9 +1,6 @@
 package com.ad.string;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class StringSolution {
 
@@ -116,6 +113,26 @@ public class StringSolution {
         if (currNode.children.isEmpty()) {
             parent.children.remove(letter);
         }
+    }
+
+    /**
+     * 242. 有效的字母异位词
+     * https://leetcode-cn.com/problems/valid-anagram/submissions/
+     *
+     * @param s
+     * @param t
+     * @return
+     */
+    public boolean isAnagram(String s, String t) {
+        if (s.length() != t.length()) return false;
+
+        char[] s1 = s.toCharArray();
+        char[] t1 = t.toCharArray();
+
+        Arrays.sort(s1);
+        Arrays.sort(t1);
+
+        return Arrays.equals(s1, t1);
     }
 
     /**

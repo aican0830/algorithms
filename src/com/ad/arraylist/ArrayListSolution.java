@@ -72,6 +72,30 @@ public class ArrayListSolution {
 
 
     /**
+     * 121. 买卖股票的最佳时机
+     * https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/
+     *
+     * @param prices
+     * @return
+     */
+    public int maxProfit(int[] prices) {
+
+        int maxProfit = 0; //保存最大利润
+        int minPrice = Integer.MAX_VALUE; //设置购入最小值
+
+        for (int i = 0; i < prices.length; i++) {
+
+            if (prices[i] < minPrice) { //如果当天价格小于最小值，则覆盖最小值
+                minPrice = prices[i];
+            } else if (prices[i]-minPrice > maxProfit) { // 某天股票价格-最低购入，则利润最大，
+                maxProfit = prices[i] - minPrice; // 设置最大利润
+            }
+        }
+
+        return maxProfit;
+    }
+
+    /**
      * 240. 搜索二维矩阵 II
      * https://leetcode-cn.com/problems/search-a-2d-matrix-ii/
      *

@@ -52,18 +52,18 @@ public class ArrayListSolution {
         int len = nums.length >> 1; // n/2的长度
         Map<Integer, Integer> map = new HashMap<>();
 
-        for (int i = 0; i < nums.length; i++) {
+        for (int num : nums) {
 
             //存储到map key为数组的值，key存在value+1
-            if (!map.containsKey(nums[i])) {
-                map.put(nums[i], 1);
+            if (!map.containsKey(num)) {
+                map.put(num, 1);
             } else {
-                map.put(nums[i], map.get(nums[i]) + 1);
+                map.put(num, map.get(num) + 1);
             }
 
             //判断元素出现的次数
-            if (map.get(nums[i]) > len) {
-                return nums[i];
+            if (map.get(num) > len) {
+                return num;
             }
         }
 
@@ -83,12 +83,12 @@ public class ArrayListSolution {
         int maxProfit = 0; //保存最大利润
         int minPrice = Integer.MAX_VALUE; //设置购入最小值
 
-        for (int i = 0; i < prices.length; i++) {
+        for (int price : prices) {
 
-            if (prices[i] < minPrice) { //如果当天价格小于最小值，则覆盖最小值
-                minPrice = prices[i];
-            } else if (prices[i]-minPrice > maxProfit) { // 某天股票价格-最低购入，则利润最大，
-                maxProfit = prices[i] - minPrice; // 设置最大利润
+            if (price < minPrice) { //如果当天价格小于最小值，则覆盖最小值
+                minPrice = price;
+            } else if (price - minPrice > maxProfit) { // 某天股票价格-最低购入，则利润最大，
+                maxProfit = price - minPrice; // 设置最大利润
             }
         }
 

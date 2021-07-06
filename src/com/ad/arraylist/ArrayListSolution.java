@@ -149,6 +149,19 @@ public class ArrayListSolution {
         }
     }
 
+    public void moveZeroes1(int[] nums) {
+        int n = nums.length, left = 0, right = 0;
+        while (right < n) {
+            if (nums[right] != 0) {
+                System.out.println("left:" + left+" right:"+right);
+                swap(nums, left, right);
+                left++;
+            }
+            right++;
+        }
+    }
+
+
     private void swap(int[] nums, int i1, int i2) {
 
         int temp = nums[i1];

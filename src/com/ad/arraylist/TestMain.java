@@ -18,7 +18,7 @@ public class TestMain {
 //        System.out.printf(""+ profit);
 
         int[] nums2 = new int[]{2,1};
-        solution.moveZeroes(nums2);
+        solution.moveZeroes1(nums2);
 
         System.out.println(""+PrintUtils.printArray(nums2));
 

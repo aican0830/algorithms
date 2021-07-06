@@ -13,9 +13,14 @@ public class TestMain {
 
         int[] prices = new int[]{7,6,4,3,1};
 
-        int profit = solution.maxProfit(prices);
+//        int profit = solution.maxProfit(prices);
+//
+//        System.out.printf(""+ profit);
 
-        System.out.printf(""+ profit);
+        int[] nums2 = new int[]{2,1};
+        solution.moveZeroes(nums2);
+
+        System.out.println(""+PrintUtils.printArray(nums2));
 
 //        boolean res = solution.searchMatrix(nums, 100);
 //        System.out.printf("" + res);

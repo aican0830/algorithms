@@ -1,5 +1,7 @@
 package com.ad.arraylist;
 
+import com.ad.utils.PrintUtils;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -116,6 +118,42 @@ public class ArrayListSolution {
         }
 
         return false;
+    }
+
+    /**
+     * 283. 移动零
+     * https://leetcode-cn.com/problems/move-zeroes/
+     *
+     * @param nums
+     */
+    public void moveZeroes(int[] nums) {
+
+        int n = nums.length;
+        int slow = 0;
+        int fast = 0;
+
+        while (fast < n) {
+
+            if(nums[fast] != 0) {
+                if (fast > slow) {
+                    nums[slow] = nums[fast];
+                    nums[fast] = 0;
+                    System.out.println(""+PrintUtils.printArray(nums));
+                }
+                slow++;
+
+
+            }
+
+            fast++;
+        }
+    }
+
+    private void swap(int[] nums, int i1, int i2) {
+
+        int temp = nums[i1];
+        nums[i1] = nums[i2];
+        nums[i2] = temp;
     }
 
     /**

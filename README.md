@@ -42,3 +42,6 @@
 [104. 二叉树的最大深度](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/)
 
 [144. 二叉树的前序遍历](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/)
+
+#### 栈和队列
+[20. 有效的括号](https://leetcode-cn.com/problems/valid-parentheses/)

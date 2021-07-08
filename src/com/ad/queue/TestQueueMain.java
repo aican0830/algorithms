@@ -6,8 +6,10 @@ public class TestQueueMain {
 
         String s = "{}";
 
-        QueueSolution qs = new QueueSolution();
-        System.out.printf("" + qs.isValid(s));
+        System.out.println(""+((4+2)%7));
+
+//        QueueSolution qs = new QueueSolution();
+//        System.out.printf("" + qs.isValid(s));
 
     }
 }

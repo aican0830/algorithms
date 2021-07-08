@@ -174,6 +174,42 @@ public class TreeSolution {
     }
 
     /**
+     * 107. 二叉树的层序遍历 II
+     * https://leetcode-cn.com/problems/binary-tree-level-order-traversal-ii/
+     *
+     * @param root
+     * @return
+     */
+    public List<List<Integer>> levelOrderBottom(TreeNode root) {
+        //链表存储结果
+        List<List<Integer>> levelOrder = new LinkedList<List<Integer>>();
+        if (root == null) {
+            return levelOrder;
+        }
+        Queue<TreeNode> queue = new LinkedList<TreeNode>();
+        queue.offer(root);
+        while (!queue.isEmpty()) {
+            List<Integer> level = new ArrayList<Integer>();
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                TreeNode node = queue.poll();
+                assert node != null;
+                level.add(node.val);
+                TreeNode left = node.left, right = node.right;
+                if (left != null) {
+                    queue.offer(left);
+                }
+                if (right != null) {
+                    queue.offer(right);
+                }
+            }
+            //网头部插入结果，则返回的是逆序
+            levelOrder.add(0, level);
+        }
+        return levelOrder;
+    }
+
+    /**
      * 144. 二叉树的前序遍历
      * https://leetcode-cn.com/problems/binary-tree-preorder-traversal/
      *

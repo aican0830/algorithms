@@ -1,18 +1,22 @@
 package com.ad.leetcode;
 
+import java.util.List;
+
 public class TreeTestMain {
     public static void main(String[] args) {
 
-        LinkedListSolution linkedList = new LinkedListSolution();
+        TreeNode root = new TreeNode(3);
+        root.left = new TreeNode(9, null, null);
+        root.right = new TreeNode(20, new TreeNode(15, null, null), new TreeNode(7, null, null));
 
-        ListNode  five = new ListNode(5, null);
-        ListNode four = new ListNode(4, five);
-        ListNode three = new ListNode(3, four);
-        ListNode second = new ListNode(2, three);
-        ListNode first = new ListNode(1, second);
-        ListNode result = linkedList.removeNthFromEnd(first, 2);
 
-        String output = linkedList.printer(result);
-        System.out.printf(output);
+        TreeSolution ts = new TreeSolution();
+        List<List<Integer>> res = ts.levelOrderBottom(root);
+        int i = 0;
+        for (List<Integer> r : res) {
+
+            System.err.println("" + r.get(i));
+        }
+
     }
 }

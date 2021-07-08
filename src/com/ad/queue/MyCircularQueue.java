@@ -14,8 +14,6 @@ class MyCircularQueue {
     private int count;
 
     private int headIndex;
-    private int head;
-    private int tail;
 
     public MyCircularQueue(int k) {
 

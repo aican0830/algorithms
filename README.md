@@ -46,6 +46,8 @@
 #### 栈和队列
 [20. 有效的括号](https://leetcode-cn.com/problems/valid-parentheses/)
 
+[155. 最小栈](https://leetcode-cn.com/problems/min-stack/)
+
 [225. 用队列实现栈](https://leetcode-cn.com/problems/implement-stack-using-queues/)
 
 [622. 设计循环队列]https://leetcode-cn.com/problems/design-circular-queue/

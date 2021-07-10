@@ -47,7 +47,66 @@ public class LinkedListSolution {
      */
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
 
-        return null;
+        if (l1 == null) return l2;
+        if (l2 == null) return l1;
+
+        if (l1.val < l2.val) {
+            l1.next = mergeTwoLists(l1.next, l2);
+            return l1;
+        } else {
+            l2.next =mergeTwoLists(l1, l2.next);
+            return l2;
+        }
+    }
+
+    /**
+     * 迭代方法解决
+     *
+     * @param l1
+     * @param l2
+     * @return
+     */
+    public ListNode mergeTwoLists2(ListNode l1, ListNode l2) {
+
+        ListNode preHead = new ListNode(-1);
+        ListNode prev = preHead;
+
+        while(l1 != null && l2 != null) {
+            if (l1.val < l2.val) {
+                prev.next = l1;
+                l1 = l1.next;
+            } else {
+                prev.next = l2;
+                l2 = l2.next;
+            }
+            prev = prev.next;
+        }
+
+        prev.next = l1 == null ? l2 : l1;
+
+        return preHead.next;
+    }
+
+
+    /**
+     * 206. 反转链表
+     * https://leetcode-cn.com/problems/reverse-linked-list/
+     *
+     * @param head
+     * @return
+     */
+    public ListNode reverseList(ListNode head) {
+        if (head == null) return head;
+        ListNode prev = null;
+        ListNode cur = head;
+
+        while (cur != null) {
+            ListNode next = cur.next;
+            cur.next = prev;
+            prev = cur;
+            cur = next;
+        }
+        return prev;
     }
 
 

@@ -50,4 +50,4 @@
 
 [225. 用队列实现栈](https://leetcode-cn.com/problems/implement-stack-using-queues/)
 
-[622. 设计循环队列]https://leetcode-cn.com/problems/design-circular-queue/
+[622. 设计循环队列](https://leetcode-cn.com/problems/design-circular-queue/)

@@ -87,6 +87,32 @@ public class LinkedListSolution {
         return preHead.next;
     }
 
+    /**
+     * 203. 移除链表元素
+     * https://leetcode-cn.com/problems/remove-linked-list-elements/
+     *
+     * @param head
+     * @param val
+     * @return
+     */
+    public ListNode removeElements(ListNode head, int val) {
+
+        ListNode preHead = new ListNode(-1);
+        preHead.next = head;
+        ListNode cur = preHead;
+
+        while(cur.next != null) {
+
+            if (cur.next.val == val) {
+                cur.next = cur.next.next;
+            } else {
+                cur = cur.next;
+            }
+        }
+
+        return preHead.next;
+    }
+
 
     /**
      * 206. 反转链表
@@ -133,6 +159,8 @@ public class LinkedListSolution {
         s.append("null");
         s.append("]");
 
-        return s.toString();
+        String res = s.toString();
+        System.out.println(""+res);
+        return res;
     }
 }

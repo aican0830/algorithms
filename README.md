@@ -51,9 +51,13 @@
 
 [203. 移除链表元素](https://leetcode-cn.com/problems/remove-linked-list-elements/)
 
+<<<<<<< HEAD
 [234. 回文链表](https://leetcode-cn.com/problems/palindrome-linked-list/)
 
 [237. 删除链表中的节点](https://leetcode-cn.com/problems/delete-node-in-a-linked-list/)
+=======
+[707. 设计链表](https://leetcode-cn.com/problems/design-linked-list/)
+>>>>>>> add design-linked-list
 
 #### 二叉树
 [98. 验证二叉搜索树](https://leetcode-cn.com/problems/validate-binary-search-tree/)

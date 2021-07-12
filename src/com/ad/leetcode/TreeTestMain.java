@@ -26,15 +26,15 @@ public class TreeTestMain {
 //        ListNode b = new ListNode(2, c);
 //        ListNode a = new ListNode(1, b);
 
-        ListNode c = new ListNode(6, null);
-        ListNode b = new ListNode(6, c);
-        ListNode a = new ListNode(6, b);
-
-
-        LinkedListSolution sl = new LinkedListSolution();
-        ListNode head = sl.removeElements(a, 6);
-
-        sl.printer(head);
+//        ListNode c = new ListNode(6, null);
+//        ListNode b = new ListNode(6, c);
+//        ListNode a = new ListNode(6, b);
+//
+//
+//        LinkedListSolution sl = new LinkedListSolution();
+//        ListNode head = sl.removeElements(a, 6);
+//
+//        sl.printer(head);
 
 
 

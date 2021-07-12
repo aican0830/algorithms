@@ -1,4 +1,8 @@
-package com.ad.leetcode;
+package src.com.ad.linkedlist;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
 
 public class LinkedListSolution {
 
@@ -85,6 +89,41 @@ public class LinkedListSolution {
         prev.next = l1 == null ? l2 : l1;
 
         return preHead.next;
+    }
+
+    /**
+     * 环形链表 II
+     * https://leetcode-cn.com/problems/linked-list-cycle-ii/
+     * 哈希表解法
+     * 类似解法题目：217. 存在重复元素
+     * 题解：类似数组[1,2,3,1], 在链表中，数组的第五个值，可以理解为，3的下一个指针是1 [1->2->3->1]
+     *
+     * @param head
+     * @return
+     */
+    public ListNode detectCycle(ListNode head) {
+
+        HashSet<ListNode> hashSet = new HashSet<>();
+        while(head != null) {
+
+            if (hashSet.contains(head)) {
+                return head;
+            }
+            hashSet.add(head);
+            head = head.next;
+        }
+        return null;
+    }
+
+    /**
+     * 解法2，使用快慢指针
+     *
+     * @param head
+     * @return
+     */
+    public ListNode detectCycle2(ListNode head) {
+
+        return null;
     }
 
     /**

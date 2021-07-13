@@ -92,7 +92,76 @@ public class LinkedListSolution {
     }
 
     /**
-     * 环形链表 II
+     * 61. 旋转链表
+     * https://leetcode-cn.com/problems/rotate-list/
+     * 题解： 先将链表转成环形，在找位置
+     *
+     * @param head
+     * @param k
+     * @return
+     */
+    public ListNode rotateRight(ListNode head, int k) {
+
+        // 移动0个位置，空链表，或只有一个元素，直接返回
+        if (k == 0 || head == null || head.next == null) {
+            return head;
+        }
+
+        //计算链表长度
+        ListNode cur = head;
+        int n = 1;
+        while(cur.next != null) {
+            cur = cur.next;
+            n++;
+        }
+        //计算移动多少个元素(n-1) - (k % n)
+        int mov = n - k % n;
+        //如果移动长度等于n，返回原链表
+        if (mov == n) return head;
+
+        //设置链表为环形
+        cur.next = head;
+
+        while(mov-- > 0) {
+            cur = cur.next;
+        }
+
+        //找到了断开的位置，设置新链表
+        ListNode ret = cur.next;
+
+        //断开链表
+        cur.next = null;
+
+        return ret;
+    }
+
+    /**
+     * 83. 删除排序链表中的重复元素
+     * https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/
+     * 题解： 链表是排好序的，重复的元素在链表中是相邻的。判断当前节点是否和下一个节点相等则为重复，让当前节点跳过下一个节点往后走
+     *
+     *
+     * @param head
+     * @return
+     */
+    public ListNode deleteDuplicates(ListNode head) {
+
+        if (head == null) return head;
+        ListNode cur = head;
+
+        while(cur.next != null) {
+            if (cur.val == cur.next.val) {
+                cur.next = cur.next.next;
+            } else {
+                cur = cur.next;
+            }
+        }
+
+        return head;
+    }
+
+    /**
+     * 142.环形链表 II
      * https://leetcode-cn.com/problems/linked-list-cycle-ii/
      * 哈希表解法
      * 类似解法题目：217. 存在重复元素

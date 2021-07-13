@@ -33,9 +33,13 @@
 
 [19. 删除链表的倒数第 N 个结点](https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/)
 
-[203. 移除链表元素](https://leetcode-cn.com/problems/remove-linked-list-elements/)
+[61. 旋转链表](https://leetcode-cn.com/problems/rotate-list/)
 
-[环形链表 II](https://leetcode-cn.com/problems/linked-list-cycle-ii/)
+[83. 删除排序链表中的重复元素](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/)
+
+[142. 环形链表 II](https://leetcode-cn.com/problems/linked-list-cycle-ii/)
+
+[203. 移除链表元素](https://leetcode-cn.com/problems/remove-linked-list-elements/)
 
 #### 二叉树
 [98. 验证二叉搜索树](https://leetcode-cn.com/problems/validate-binary-search-tree/)

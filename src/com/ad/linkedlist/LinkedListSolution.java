@@ -63,6 +63,11 @@ public class LinkedListSolution {
         }
     }
 
+    public void deleteNode(ListNode node) {
+        node.val = node.next.val;
+        node.next = node.next.next;
+    }
+
     /**
      * 迭代方法解决
      *

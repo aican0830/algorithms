@@ -22,6 +22,8 @@
 
 [242. 有效的字母异位词](https://leetcode-cn.com/problems/valid-anagram/)
 
+[328. 奇偶链表](https://leetcode-cn.com/problems/odd-even-linked-list/)
+
 [344. 反转字符串](https://leetcode-cn.com/problems/reverse-string/)
 
 [387. 字符串中的第一个唯一字符](https://leetcode-cn.com/problems/first-unique-character-in-a-string/)

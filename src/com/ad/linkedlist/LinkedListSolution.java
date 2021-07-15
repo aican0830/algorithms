@@ -283,4 +283,29 @@ public class LinkedListSolution {
         node.next = node.next.next;
     }
 
+    /**
+     * 328. 奇偶链表
+     * https://leetcode-cn.com/problems/odd-even-linked-list/
+     *
+     * @param head
+     * @return
+     */
+    public ListNode oddEvenList(ListNode head) {
+
+       if (head == null) return head;
+       //保存偶数
+        ListNode evenHead = head.next;
+        ListNode odd =  head; //指向奇数节点
+        ListNode even = evenHead; //指向偶数节点
+
+        while (even != null && even.next != null) {
+            odd.next = even.next; // 奇数节点指向偶数的下一个
+            odd = odd.next;  // odd 变成even 下一个节点
+            even.next = odd.next; // 偶数节点指向奇数的下一个
+            even = even.next; // even 变成odd 下一个节点
+        }
+
+        odd.next = evenHead;
+        return head;
+    }
 }

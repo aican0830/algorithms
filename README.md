@@ -29,7 +29,9 @@
 [387. 字符串中的第一个唯一字符](https://leetcode-cn.com/problems/first-unique-character-in-a-string/)
 
 #### 链表
-在LinkedListSolution.java中详细实现
+在LinkedListSolution.java中详细实现 
+
+[2. 两数之和](https://leetcode-cn.com/problems/add-two-numbers/)
 
 [21. 合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/)
 

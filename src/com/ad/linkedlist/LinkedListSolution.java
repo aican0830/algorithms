@@ -5,6 +5,48 @@ import java.util.*;
 public class LinkedListSolution {
 
     /**
+     * 2. 两数相加
+     * https://leetcode-cn.com/problems/add-two-numbers/
+     *
+     * @param l1
+     * @param l2
+     * @return
+     */
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+
+        int carry = 0;
+        ListNode head = null, tail = null;
+
+        while (l1 != null || l2 != null) {
+            int n = l1 != null ? l1.val : 0;
+            int m = l2 != null ? l2.val :0;
+            int sum = n+m+carry;
+
+            if (head == null) {
+                head = tail = new ListNode(sum % 10);
+            } else {
+                tail.next = new ListNode(sum % 10);
+                tail = tail.next;
+            }
+            carry = sum / 10;
+
+            if (l1 != null) {
+                l1 = l1.next;
+            }
+
+            if (l2 != null) {
+                l2 = l2.next;
+            }
+        }
+
+        if (carry > 0)  {
+            tail.next = new ListNode(carry);
+        }
+
+        return head;
+    }
+
+    /**
      * 19. 删除链表的倒数第 N 个结点
      * https://leetcode-cn.com/leetbook/read/top-interview-questions-easy/xn2925/
      * @param head

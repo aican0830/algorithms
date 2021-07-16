@@ -1,8 +1,6 @@
 package src.com.ad.linkedlist;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
+import java.util.*;
 
 public class LinkedListSolution {
 
@@ -270,6 +268,36 @@ public class LinkedListSolution {
         String res = s.toString();
         System.out.println(""+res);
         return res;
+    }
+
+    /**
+     * 234. 回文链表
+     * https://leetcode-cn.com/problems/palindrome-linked-list/
+     *
+     * @param head
+     * @return
+     */
+    public boolean isPalindrome(ListNode head) {
+
+        if (head == null) return false;
+        List<ListNode> list = new ArrayList<>();
+        ListNode cur = head;
+        while(cur != null) {
+            list.add(cur);
+            cur = cur.next;
+        }
+
+        int l = 0;
+        int r = list.size()-1;
+        while(l < r) {
+            if (list.get(l).val != list.get(r).val) {
+                return false;
+            }
+            l++;
+            r--;
+        }
+
+        return true;
     }
 
     /**

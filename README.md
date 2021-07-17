@@ -41,6 +41,8 @@
 
 [83. 删除排序链表中的重复元素](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/)
 
+[86. 分割链表](https://leetcode-cn.com/problems/partition-list/)
+
 [142. 环形链表 II](https://leetcode-cn.com/problems/linked-list-cycle-ii/)
 
 [203. 移除链表元素](https://leetcode-cn.com/problems/remove-linked-list-elements/)

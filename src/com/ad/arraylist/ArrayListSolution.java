@@ -1,4 +1,4 @@
-package com.ad.arraylist;
+package src.com.ad.arraylist;
 
 import com.ad.utils.PrintUtils;
 
@@ -200,5 +200,46 @@ public class ArrayListSolution {
         }
 
         return ans;
+    }
+
+    /**
+     * 724. 寻找数组的中心下标
+     * https://leetcode-cn.com/problems/find-pivot-index/
+     *
+     * @param nums
+     * @return
+     */
+    public int pivotIndex(int[] nums) {
+
+        int index = -1;
+        int len = nums.length-1;
+        for (int i = 0; i <= len; i++) {
+
+            System.out.println("i = " + i);
+            //计算左边的值
+            int lSum = 0;
+            int ll = 0;
+            while(ll < i) {
+                System.out.println("nums[ll] = " + nums[ll]);
+                lSum+=nums[ll];
+                ll++;
+            }
+
+            //计算右边的值
+            int rSum = 0;
+            int rr = len;
+            while(rr>i) {
+                System.out.println("nums[rr] = " + nums[rr]);
+                rSum += nums[rr];
+                rr--;
+            }
+
+            System.out.println("len="+len+",i="+i+",lSum = " + lSum + ",rSum = " + rSum);
+            if (rSum == lSum) {
+                return i;
+            }
+        }
+
+        return index;
     }
 }

@@ -17,6 +17,8 @@
 
 [448. 找到所有数组中消失的数字](https://leetcode-cn.com/problems/find-all-numbers-disappeared-in-an-array/)
 
+[724. 寻找数组的中心下标](https://leetcode-cn.com/problems/find-pivot-index/)
+
 #### 字符串
 [125. 验证回文串](https://leetcode-cn.com/problems/valid-palindrome/)
 

@@ -1,8 +1,4 @@
-package com.ad.arraylist;
-
-import com.ad.utils.PrintUtils;
-
-import java.util.List;
+package src.com.ad.arraylist;
 
 public class TestMain {
 
@@ -13,16 +9,9 @@ public class TestMain {
 
         int[] prices = new int[]{7,6,4,3,1};
 
-//        int profit = solution.maxProfit(prices);
-//
-//        System.out.printf(""+ profit);
+        int[] testNums = new int[]{-1,-1,0,1,1,0};
 
-        int[] nums2 = new int[]{2,1};
-        solution.moveZeroes1(nums2);
-
-        System.out.println(""+PrintUtils.printArray(nums2));
-
-//        boolean res = solution.searchMatrix(nums, 100);
-//        System.out.printf("" + res);
+        int index = solution.pivotIndex(testNums);
+        System.out.println("index = " + index);
     }
 }

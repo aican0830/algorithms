@@ -5,6 +5,8 @@
 ### Leetcode 题解代码实现
 
 #### 数组
+[56. 合并区间](https://leetcode-cn.com/problems/merge-intervals/)
+
 [88. 合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/)
 
 [121. 买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/)

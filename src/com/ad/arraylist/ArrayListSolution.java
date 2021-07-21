@@ -274,4 +274,62 @@ public class ArrayListSolution {
 
         return index;
     }
+
+    /**
+     * 面试题 01.08. 零矩阵
+     * https://leetcode-cn.com/problems/zero-matrix-lcci/
+     *
+     * @param matrix
+     */
+    public void setZeroes(int[][] matrix) {
+
+        int m = matrix.length, n = matrix[0].length;
+        boolean[] row = new boolean[m], col = new boolean[n];
+
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (matrix[i][j] == 0) {
+                    row[i] = col[j] = true;
+                }
+            }
+        }
+
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+
+                if (row[i] || col[j]) {
+                    matrix[i][j] = 0;
+                }
+            }
+        }
+    }
+
+    /**
+     * 面试题 01.07. 旋转矩阵
+     * https://leetcode-cn.com/problems/rotate-matrix-lcci/
+     *
+     * @param matrix
+     */
+    public void rotate(int[][] matrix) {
+
+        //数组长度
+        int n = matrix.length;
+
+        //生命一个同样大小的矩阵数组
+        int[][] newMatrix = new int[n][n];
+
+        //观察旋转规律，旋转后新的位置为 n - row -i
+        for (int i = 0; i < n; ++i) {
+            for (int j = 0; j < n; ++j) {
+                newMatrix[j][n-i-1] = matrix[i][j];
+            }
+        }
+
+        //旋转后的矩阵，替换原矩阵
+        for (int i = 0; i < n; ++i) {
+            for (int j = 0; j < n; ++j) {
+                matrix[i][j] = newMatrix[i][j];
+            }
+        }
+    }
 }

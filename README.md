@@ -21,6 +21,10 @@
 
 [724. 寻找数组的中心下标](https://leetcode-cn.com/problems/find-pivot-index/)
 
+[面试题 01.07. 旋转矩阵](https://leetcode-cn.com/problems/rotate-matrix-lcci/)
+
+[零矩阵](https://leetcode-cn.com/problems/zero-matrix-lcci/)
+
 #### 字符串
 [125. 验证回文串](https://leetcode-cn.com/problems/valid-palindrome/)
 

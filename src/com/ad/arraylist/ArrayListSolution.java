@@ -235,6 +235,60 @@ public class ArrayListSolution {
     }
 
     /**
+     * 498. 对角线遍历
+     * https://leetcode-cn.com/problems/diagonal-traverse/
+     *
+     * @param mat
+     * @return
+     */
+    public int[] findDiagonalOrder(int[][] mat) {
+        if (mat == null || mat.length == 0) return new int[0];
+
+        int N = mat.length;
+        int M = mat[0].length;
+
+        int[] result = new int[M*N];
+
+        int k = 0 ;
+        ArrayList<Integer> intermediate = new ArrayList<>();
+
+        for (int i = 0; i < (N + M - 1); i++) {
+
+            intermediate.clear();
+
+            // M = 3, N = 3
+            // i = 0, r = 0, c = 0,  1, => 1
+            // i = 1, r = 0, c = 1,  2, => mat[0,1] = 2, mat[1][0] = 4
+            // i = 2, r = 0, c = 2,  3, => mat[0,2] = 3, mat[1][1] = 5, mat[2][0] = 7
+            // i = 3, r = 1, c = 3,  6, => 8
+            int r = i < M ? 0 : i - M + 1;
+            int c = i < M ? i : M - 1;
+
+            System.out.println("r = " + r + ", c = " + c + ", mat[r][c] = " + mat[r][c]);
+
+            while (r < N && c > -1) {
+                System.out.println("mat["+r+"]["+c+"] = " + mat[r][c]);
+                intermediate.add(mat[r][c]);
+                ++r;
+                --c;
+            }
+
+            System.out.println("===================");
+
+            //rotate
+            if (i % 2 == 0) {
+                Collections.reverse(intermediate);
+            }
+
+            for (int j = 0; j < intermediate.size(); j++) {
+                result[k++] = intermediate.get(j);
+            }
+        }
+
+        return result;
+    }
+
+    /**
      * 724. 寻找数组的中心下标
      * https://leetcode-cn.com/problems/find-pivot-index/
      *

@@ -13,20 +13,22 @@ public class TestMain {
 //
 //        int index = solution.pivotIndex(testNums);
 //        System.out.println("index = " + index);
-        int n = nums.length;
-        for (int i = 0; i < n; ++i) {
-            System.out.println("");
-            for (int j = 0; j < n; ++j) {
-                System.out.print("        \ti="+i+",j="+j+",nums[i][j] = " + nums[i][j]);
-            }
-        }
-        solution.rotate(nums);
 
-        for (int i = 0; i < n; ++i) {
-            System.out.println("");
-            for (int j = 0; j < n; ++j) {
-                System.out.print(" \trotate="+(n-i-1)+", i="+i+",j="+j+",nums[i][j] = " + nums[i][j]);
-            }
-        }
+        int[][] mat = new int[][]{{1,2,3}, {4,5,6}, {7,8,9}};
+//        int n = nums.length;
+//        for (int i = 0; i < n; ++i) {
+//            System.out.println("");
+//            for (int j = 0; j < n; ++j) {
+//                System.out.print("        \ti="+i+",j="+j+",nums[i][j] = " + nums[i][j]);
+//            }
+//        }
+        solution.findDiagonalOrder(mat);
+
+//        for (int i = 0; i < n; ++i) {
+//            System.out.println("");
+//            for (int j = 0; j < n; ++j) {
+//                System.out.print(" \trotate="+(n-i-1)+", i="+i+",j="+j+",nums[i][j] = " + nums[i][j]);
+//            }
+//        }
     }
 }

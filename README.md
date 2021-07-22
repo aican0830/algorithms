@@ -19,6 +19,8 @@
 
 [448. 找到所有数组中消失的数字](https://leetcode-cn.com/problems/find-all-numbers-disappeared-in-an-array/)
 
+[498. 对角线遍历](https://leetcode-cn.com/problems/diagonal-traverse/)
+
 [724. 寻找数组的中心下标](https://leetcode-cn.com/problems/find-pivot-index/)
 
 [面试题 01.07. 旋转矩阵](https://leetcode-cn.com/problems/rotate-matrix-lcci/)

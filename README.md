@@ -3,13 +3,18 @@
 
 ### 算法和数据结构学习
 ### Leetcode 题解代码实现
+### 标记
+Easy：#3ca047
+Medium：#ef6c00
+Hard：#e91e63
 
 #### 数组
-[56. 合并区间](https://leetcode-cn.com/problems/merge-intervals/)
+No. | desc | level | lable
+---|---|---|---
+56|[合并区间](https://leetcode-cn.com/problems/merge-intervals/)|<font color=#3ca047 size=3>Easy</font>|Array
+88|[合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/)|<font color=#3ca047 size=3>Medium</font>|Array
+121|[买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/)|<font color=#3ca047 size=3>Hard</font>|Array
 
-[88. 合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/)
-
-[121. 买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/)
 
 [169. 多数元素](https://leetcode-cn.com/problems/majority-element/)
 
@@ -77,10 +82,10 @@
 [144. 二叉树的前序遍历](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/)
 
 #### 栈和队列
-[20. 有效的括号](https://leetcode-cn.com/problems/valid-parentheses/)
 
-[155. 最小栈](https://leetcode-cn.com/problems/min-stack/)
-
-[225. 用队列实现栈](https://leetcode-cn.com/problems/implement-stack-using-queues/)
-
-[622. 设计循环队列](https://leetcode-cn.com/problems/design-circular-queue/)
+No. | desc | level | lable
+---|---|---|---
+20|[20. 有效的括号](https://leetcode-cn.com/problems/valid-parentheses/)|<font color=#3ca047 size=3>Easy</font>|Queue
+155|[155. 最小栈](https://leetcode-cn.com/problems/min-stack/)|<font color=#3ca047 size=3>Easy</font>|Queue
+225|[225. 用队列实现栈](https://leetcode-cn.com/problems/implement-stack-using-queues/)|<font color=#3ca047 size=3>Easy</font>|Queue
+622|[622. 设计循环队列](https://leetcode-cn.com/problems/design-circular-queue/)|<font color=#ef6c00 size=3>Easy</font>|Queue

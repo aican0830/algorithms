@@ -11,6 +11,7 @@ Hard：#e91e63
 #### 数组
 No. | desc | level | lable
 ---|---|---|---
+14|[最长公共前缀](https://leetcode-cn.com/problems/longest-common-prefix/)|Easy|Array
 56|[合并区间](https://leetcode-cn.com/problems/merge-intervals/)|<font color=#3ca047 size=3>Easy</font>|Array
 88|[合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/)|<font color=#3ca047 size=3>Medium</font>|Array
 121|[买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/)|<font color=#3ca047 size=3>Hard</font>|Array

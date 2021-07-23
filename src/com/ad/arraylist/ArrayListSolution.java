@@ -7,6 +7,44 @@ import java.util.*;
 public class ArrayListSolution {
 
     /**
+     * 14. 最长公共前缀
+     * https://leetcode-cn.com/problems/longest-common-prefix/
+     *
+     * @param strs
+     * @return
+     */
+    public String longestCommonPrefix(String[] strs) {
+        if (strs == null || strs.length == 0) {
+            return null;
+        }
+
+        //标记第一个字符串长度，循环完成，如果找到则为最长子串，否则未找到
+        int length = strs[0].length();
+        //N个字符串
+        int count = strs.length;
+
+        // strs[0] = l e e t        [0][0]
+        // strs[1] = l e e t c      [1][0]
+        // strs[2] = l e e t c o    [2][0]
+        // strs[3] = l e e          [3][0]
+        for (int i = 0; i < length; i++) {
+            // 0,1,2,3,4...
+            //定义每行第一个字符串，下面每个字符串和它对比，如果相等有不相等，查找结束
+            char c = strs[0].charAt(i);
+            for (int j = 1; j < count; j++) {
+                // 1,2,3,4
+                // i = {0,1,2,3}
+                // i == strs[j].length() 表示如果后面的字符串比第一行长度短则循环结束,且防止下标越界
+                if (i == strs[j].length() || c != strs[j].charAt(i)) {
+                    return strs[0].substring(0, i);
+                }
+            }
+        }
+
+        return strs[0];
+    }
+
+    /**
      * 56. 合并区间
      * https://leetcode-cn.com/problems/merge-intervals/
      *

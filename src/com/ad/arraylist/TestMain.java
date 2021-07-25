@@ -22,7 +22,9 @@ public class TestMain {
 //                System.out.print("        \ti="+i+",j="+j+",nums[i][j] = " + nums[i][j]);
 //            }
 //        }
-        solution.findDiagonalOrder(mat);
+        //solution.findDiagonalOrder(mat);
+        String res = solution.reverseWords("world hello ");
+        System.out.println("res = " + res);
 
 //        for (int i = 0; i < n; ++i) {
 //            System.out.println("");

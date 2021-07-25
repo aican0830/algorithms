@@ -2,6 +2,7 @@ package src.com.ad.arraylist;
 
 import com.ad.utils.PrintUtils;
 
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class ArrayListSolution {
@@ -109,6 +110,42 @@ public class ArrayListSolution {
 
             nums1[tail--] = cur;
         }
+    }
+
+    /**
+     * 151. 翻转字符串里的单词
+     * https://leetcode-cn.com/problems/reverse-words-in-a-string/
+     *
+     * @param s
+     * @return
+     */
+    public String reverseWords(String s) {
+
+        //去除空格
+        s = s.trim();
+
+        //分割成字符串数组
+        String[] strArrays = s.split("\\s+");
+        int len = strArrays.length;
+
+        //反转
+        for (int i = 0; i < len / 2 ; i++) {
+            String temp = strArrays[i];
+            strArrays[i] = strArrays[len - i -1];
+            strArrays[len - i - 1] = temp;
+        }
+
+        //空格连接后返回字符串
+        return String.join(" ", strArrays);
+    }
+
+    public String reverseWords2(String s) {
+        // 除去开头和末尾的空白字符
+        s = s.trim();
+        // 正则匹配连续的空白字符作为分隔符分割
+        List<String> wordList = Arrays.asList(s.split("\\s+"));
+        Collections.reverse(wordList);
+        return String.join(" ", wordList);
     }
 
     /**

@@ -46,6 +46,62 @@ public class ArrayListSolution {
     }
 
     /**
+     * 28. Implement strStr()
+     * https://leetcode-cn.com/problems/implement-strstr/
+     *
+     * 1. 查找字符串出现的坐标，使用两层循环
+     * 2. 外层循环，因为要查找字符串，所有外层循环的边界为，字符串长度-查找字符串的长度
+     * 3. 内层循环为待查找字符串的长度，如果循环中有不相等，则标记为false，反之为true;
+     *
+     * @param haystack
+     * @param needle
+     * @return
+     */
+    public int strStr(String haystack, String needle) {
+
+        int ans = -1;
+        int fast = needle.length();
+        int slow = 0;
+        int len = haystack.length();
+
+        while (slow <= len-fast) {
+
+            boolean flag = true;
+            int i = 0;
+            while (i < fast) {
+                if (haystack.charAt(slow+i) != needle.charAt(i)) {
+                    flag = false;
+                    break;
+                }
+                i++;
+            }
+            if (flag) {
+                return slow;
+            }
+
+            slow++;
+        }
+        return ans;
+    }
+
+    public int strStr2(String haystack, String needle) {
+        int n = haystack.length(), m = needle.length();
+        for (int i = 0; i + m <= n; i++) {
+            boolean flag = true;
+            for (int j = 0; j < m; j++) {
+                if (haystack.charAt(i + j) != needle.charAt(j)) {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    /**
      * 56. 合并区间
      * https://leetcode-cn.com/problems/merge-intervals/
      *
@@ -139,6 +195,15 @@ public class ArrayListSolution {
         return String.join(" ", strArrays);
     }
 
+    /**
+     * 使用系统函数解决
+     * 1. 根据规律用空格把字符串分割成字符串数组
+     * 2. 对数组进行反转，原生代码，参考反转数组、反转字符串
+     * 3. 用空格把字符串数组拼接成字符串返回
+     *
+     * @param s
+     * @return
+     */
     public String reverseWords2(String s) {
         // 除去开头和末尾的空白字符
         s = s.trim();
@@ -364,6 +429,36 @@ public class ArrayListSolution {
     }
 
     /**
+     * 561. 数组拆分 I
+     * https://leetcode-cn.com/problems/array-partition-i/
+     *
+     * 1. 数组升序排序
+     * 2. 相邻两数求最小值，
+     * 3. 最小值累加,既求得min(a,b)总和最大
+     *
+     * @param nums
+     * @return
+     */
+    public int arrayPairSum(int[] nums) {
+
+        Arrays.sort(nums);
+
+        int len = nums.length;
+        int i = 0;
+        int j = 1;
+        int sum = 0;
+
+        while(j < len-1) {
+            int a = nums[i];
+            int b = nums[j];
+            sum+= Math.min(a, b);
+            i++;
+            j++;
+        }
+        return sum;
+    }
+
+    /**
      * 724. 寻找数组的中心下标
      * https://leetcode-cn.com/problems/find-pivot-index/
      *
@@ -461,4 +556,7 @@ public class ArrayListSolution {
             }
         }
     }
+
+
+
 }

@@ -46,6 +46,33 @@ public class ArrayListSolution {
     }
 
     /**
+     * 27. 移除元素
+     * https://leetcode-cn.com/problems/remove-element/
+     * 1. 把数组前面的值移动到数组尾部，并记录移动次数，既为返回结果
+     * 2. 左指针，
+     *
+     *
+     * @param nums
+     * @param val
+     * @return
+     */
+    public int removeElement(int[] nums, int val) {
+
+        int left = 0;
+        int right = nums.length;
+
+        while(left < right) {
+            if (nums[left] == val) {
+                nums[left] = nums[right-1];
+                right--;
+            } else {
+                left++;
+            }
+        }
+        return  left;
+    }
+
+    /**
      * 28. Implement strStr()
      * https://leetcode-cn.com/problems/implement-strstr/
      *

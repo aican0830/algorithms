@@ -12,6 +12,7 @@ Hard：#e91e63
 No. | desc | level | lable
 ---|---|---|---
 14|[最长公共前缀](https://leetcode-cn.com/problems/longest-common-prefix/)|Easy|Array
+27|[移除元素](https://leetcode-cn.com/problems/remove-element/)|Easy|Array
 28|[实现 strStr()](https://leetcode-cn.com/problems/implement-strstr/)|Media|Array
 56|[合并区间](https://leetcode-cn.com/problems/merge-intervals/)|<font color=#3ca047 size=3>Easy</font>|Array
 88|[合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/)|<font color=#3ca047 size=3>Medium</font>|Array

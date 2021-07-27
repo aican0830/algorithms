@@ -463,6 +463,32 @@ public class ArrayListSolution {
     }
 
     /**
+     * 485. 最大连续 1 的个数
+     * https://leetcode-cn.com/problems/max-consecutive-ones/
+     * 1. 记录最大连续的个数，记录最大的最大的连续个数，因为连续个数不止一次
+     * 2. 开始查找，如果找到连续的1.则 count++， 断掉之后，count 和 maxcount 进行比较，并重置count值用于下次计算
+     * 3. 最后返回 count 和 maxCount 的最大值，得到结果
+     *
+     * @param nums
+     * @return
+     */
+    public int findMaxConsecutiveOnes(int[] nums) {
+
+        int count = 0, maxCount = 0;
+
+        for (int i = 0; i < nums.length; i++) {
+
+            if (nums[i] == 1) {
+                count++;
+            } else {
+                maxCount = Math.max(maxCount, count);
+                count = 0;
+            }
+        }
+        return Math.max(maxCount, count);
+    }
+
+    /**
      * 498. 对角线遍历
      * https://leetcode-cn.com/problems/diagonal-traverse/
      *

@@ -19,6 +19,7 @@ No. | desc | level | lable
 121|[买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/)|<font color=#3ca047 size=3>Hard</font>|Array
 167|[两数之和 II - 输入有序数组](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/)|Easy|Array
 151|[翻转字符串里的单词](https://leetcode-cn.com/problems/reverse-words-in-a-string/)|Media|Array
+485|[485. 最大连续 1 的个数](https://leetcode-cn.com/problems/max-consecutive-ones/)|Easy|Array
 561|[数组拆分 I](https://leetcode-cn.com/problems/array-partition-i/)|Easy|Array
 
 [169. 多数元素](https://leetcode-cn.com/problems/majority-element/)

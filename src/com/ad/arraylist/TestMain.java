@@ -14,12 +14,16 @@ public class TestMain {
 //        int index = solution.pivotIndex(testNums);
 //        System.out.println("index = " + index);
 
-        int[] nums1 = new int[]{0,1,2,2,3,0,4,2};
-        int ans = solution.removeElement(nums1, 2);
-        System.out.println("ans = " + ans);
-        for (int i = 0; i < ans; i++) {
-            System.out.println("nums1[i] = " + nums1[i]);
-        }
+        int r1 = solution.minSubArrayLen(7, new int[]{2,3,1,2,4,3});
+
+        System.out.println("r1 = " + r1);
+
+//        int[] nums1 = new int[]{0,1,2,2,3,0,4,2};
+//        int ans = solution.removeElement(nums1, 2);
+//        System.out.println("ans = " + ans);
+//        for (int i = 0; i < ans; i++) {
+//            System.out.println("nums1[i] = " + nums1[i]);
+//        }
 
         //int[][] mat = new int[][]{{1,2,3}, {4,5,6}, {7,8,9}};
 //        int n = nums.length;

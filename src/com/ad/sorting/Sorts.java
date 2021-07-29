@@ -1,9 +1,48 @@
-package com.ad.sorting;
+package src.com.ad.sorting;
 
 import com.ad.utils.PrintUtils;
 
 public class Sorts {
 
+    /**
+     * 二分查找
+     *
+     * @param nums
+     * @param target
+     */
+    public int binarySearch(int[] nums, int target) {
+
+        int targetIndex = -1;
+        if (nums.length == 0) return targetIndex;
+
+        int n = nums.length;
+        int low = 0, high = n;
+
+        // 1,2,3,4,5,6,7,8
+        for (int i = 0; i < n; i++) {
+            while (low < high) {
+                int mid = (high - low) / 2 + low;
+                if (target == nums[mid]) {
+                    targetIndex = mid;
+                    break;
+                } else if (target > nums[mid]) {
+                    //low = 5;
+                    low = mid+1;
+                } else if (target < nums[mid]) {
+                    high = mid;
+                }
+                System.out.println("target = "+target+", mid = " + mid+", nums[mid] = " + nums[mid] +",low = " + low + ",high = " + high);
+            }
+        }
+
+        return targetIndex;
+    }
+
+    /**
+     * 冒泡排序
+     *
+     * @param nums
+     */
     public void bubbleSort(int[] nums) {
 
         for (int i = nums.length - 1; i > 0; i--) {

@@ -1,8 +1,37 @@
-package com.ad.string;
+package src.com.ad.string;
 
 import java.util.*;
 
 public class StringSolution {
+
+    /**
+     * 3. 无重复字符的最长子串
+     * https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/
+     * 双指针、滑动窗口
+     *
+     * @param s
+     * @return
+     */
+    public int lengthOfLongestSubstring(String s) {
+
+        int ans = 0;
+        HashMap<Character, Integer> map = new HashMap<>();
+
+        for (int i = 0, j = 0; j < s.length(); j++) {
+            char r = s.charAt(j);
+            map.put(r, map.getOrDefault(r, 0) + 1);
+
+            while(map.get(r) > 1) {
+                char l = s.charAt(i);
+                map.put(l, map.get(l) - 1);
+                i++;
+            }
+
+            ans = Math.max(ans, j - i + 1);
+        }
+
+        return ans;
+    }
 
     /**
      * 125. 验证回文串

@@ -40,6 +40,8 @@ No. | desc | level | lable
 [零矩阵](https://leetcode-cn.com/problems/zero-matrix-lcci/)
 
 #### 字符串
+No. | desc | level | lable
+3|[无重复字符的最长子串](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/)|Medium|String
 [125. 验证回文串](https://leetcode-cn.com/problems/valid-palindrome/)
 
 [242. 有效的字母异位词](https://leetcode-cn.com/problems/valid-anagram/)

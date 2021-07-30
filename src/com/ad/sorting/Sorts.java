@@ -4,6 +4,22 @@ import com.ad.utils.PrintUtils;
 
 public class Sorts {
 
+    public int binarySearch2(int[] nums, int target) {
+        int left = 0, right = nums.length - 1;
+        while(left <= right) {
+            int mid = (left + right) >>> 1;
+            System.out.println("mid = " + mid);
+            if(nums[mid] < target) {
+                left = mid + 1;
+            }else if(nums[mid] > target) {
+                right = mid - 1;
+            }else {
+                return mid;
+            }
+        }
+        return -1;
+    }
+
     /**
      * 二分查找
      *
@@ -19,21 +35,20 @@ public class Sorts {
         int low = 0, high = n;
 
         // 1,2,3,4,5,6,7,8
-        for (int i = 0; i < n; i++) {
-            while (low < high) {
-                int mid = (high - low) / 2 + low;
-                if (target == nums[mid]) {
-                    targetIndex = mid;
-                    break;
-                } else if (target > nums[mid]) {
-                    //low = 5;
-                    low = mid+1;
-                } else if (target < nums[mid]) {
-                    high = mid;
-                }
-                System.out.println("target = "+target+", mid = " + mid+", nums[mid] = " + nums[mid] +",low = " + low + ",high = " + high);
+        while (low < high) {
+            int mid = (high - low) / 2 + low;
+            if (target == nums[mid]) {
+                targetIndex = mid;
+                break;
+            } else if (target > nums[mid]) {
+                //low = 5;
+                low = mid+1;
+            } else if (target < nums[mid]) {
+                high = mid;
             }
+            System.out.println("target = "+target+", mid = " + mid+", nums[mid] = " + nums[mid] +",low = " + low + ",high = " + high);
         }
+
 
         return targetIndex;
     }

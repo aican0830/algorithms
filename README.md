@@ -8,6 +8,13 @@ Easy：#3ca047
 Medium：#ef6c00
 Hard：#e91e63
 
+#### 二分查找
+No. | desc | level | lable
+---|---|---|---
+33 | [搜索旋转排序数组](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)|Medium|
+374 | [猜数字大小](https://leetcode-cn.com/problems/guess-number-higher-or-lower/)|Easy|binary search
+
+
 #### 数组
 No. | desc | level | lable
 ---|---|---|---

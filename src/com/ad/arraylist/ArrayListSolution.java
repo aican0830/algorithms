@@ -1,4 +1,4 @@
-package src.com.ad.arraylist;
+package com.ad.arraylist;
 
 import com.ad.utils.PrintUtils;
 

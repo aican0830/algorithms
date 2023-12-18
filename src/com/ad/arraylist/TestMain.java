@@ -14,9 +14,15 @@ public class TestMain {
 //        int index = solution.pivotIndex(testNums);
 //        System.out.println("index = " + index);
 
-        int r1 = solution.minSubArrayLen(7, new int[]{2,3,1,2,4,3});
+//        int r1 = solution.minSubArrayLen(7, new int[]{2,3,1,2,4,3});
+//
+//        System.out.println("r1 = " + r1);
 
-        System.out.println("r1 = " + r1);
+        int[] nums1 = new int[]{2,3,4};
+        int[] ans = solution.twoSumHashMap(nums1, 6);
+        for (int i = 0; i < ans.length; i++) {
+            System.out.println("i = "+i+",\tans[i] = " + ans[i]);
+        }
 
 //        int[] nums1 = new int[]{0,1,2,2,3,0,4,2};
 //        int ans = solution.removeElement(nums1, 2);

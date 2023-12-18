@@ -326,6 +326,42 @@ public class ArrayListSolution {
         return ans;
     }
 
+    public int[] twoSumHashMap(int[] nums, int target) {
+
+        Map<Integer,Integer> map = new HashMap<Integer, Integer>();
+
+        //输入：{2,3,4} 目标 target = 6
+        //第一步：  map{2,0}  target-2 = 4，不存在
+        //第二步:  map{3,1}  target-3 = 3， 不存在
+        //第三步:  map{4,2}  target-4 = 2, 存在， 找到map中存在的key，则返回[map(key), i]
+
+        //思路：
+        // 每一步判断key的值是否等于target-nums[i](当前的值)，
+        //  1. 如果在map能找到key，则当前值和map中的key相加=target，返回
+        //  2. 如果在map中找不到key，继续写入map，直到找到为止
+        for (int i = 0; i < nums.length; i++) {
+
+            if (map.get(target-nums[i]) != null) {
+                return new int[]{map.get(target-nums[i]), i};
+            }
+            map.put(nums[i], i);
+        }
+        return new int[]{-1,-1};
+    }
+
+    public int[] twoSum1(int[] nums, int target) {
+
+        int[] res = new int[2];
+        for (int i = 0; i < nums.length; ++i) {
+            for (int j = i+1; j < nums.length; ++j) {
+                if (nums[i] + nums[j] == target) {
+                    return new int[]{i,j};
+                }
+            }
+        }
+        return res;
+    }
+
 
     /**
      *

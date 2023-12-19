@@ -29,6 +29,6 @@ public class LC78 {
 
     public static void main(String[] args) {
 
-        System.out.println(new LC78().subsets(new int[]{1,2,3,4}));
+        System.out.println(new LC78().subsets(new int[]{1,2,2}));
     }
 }
